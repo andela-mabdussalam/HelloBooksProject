@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<title>User profile</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
+   <link  href="http://fonts.googleapis.com/css?family=Acme:regular" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+  	  .navbar{
+		background-color: #763626;
+	}
+
+	img{
+		border-radius: 50%;
+	}
+    
+    .details{
+    	float: right;
+    }
+
+    button{
+    	font-size: 10px;
+    	background-color: orange;
+    	border-radius: 50px;
+    	box-shadow: 0px 15px 25px silver;
+    	outline: none;
+    }
+
+    button:hover{
+    	background-color: white
+    }
+
+    #view{
+    	margin-left: 20px;
+    	font-size: 20px;
+    	box-shadow: 0px 5px 5px black;
+    }
+
+
+    a:hover{
+    	text-decoration: none;
+    }
+    
+  li{
+       padding-top: 10px;
+    }
+
+   </style>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>          
+      </button>
+      <a href="#" class="navbar-brand" style="font-size: 30px; font-family: Pacifico; padding-top: 20px;">Hello Books</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li style="font-family: Acme; font-size: 20px;"><a href="#">Home</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="library.html">Library</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="history.html">History</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="profile.html">Profile</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="admin.html">Admin</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginpage.html" style="font-family: Acme; font-size: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      <div class="container">
+      	<div class="well" style="background-color: #336B87; height: 550px; border-radius: 30px; box-shadow: 0px 15px 25px silver; z-index: 1; margin-top: 150px;">
+      	   <img src="http://1ofdmq2n8tc36m6i46scovo2e.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg">
+      	   <div class="details">
+      	     <p style="font-size: 30px; font-family: Pacifico; color: orange">Name</p>
+      	   	 <p style="font-size: 40px; font-family: Acme;">Steve Hallam</p>
+      	   	 <p style="font-size: 30px; font-family: Pacifico; color: orange;">Interests</p>
+      	   	 <p style="font-size: 40px; font-family: Acme;">Technology and Agriculture</p>
+      	   	 <p style="font-size: 30px; font-family: Pacifico; color: orange;">Statistics</p>
+      	   	 <p style="font-size: 40px; font-family: Acme;">Books Read : 234</p>
+      	   	 <p style="font-size: 40px; font-family: Acme;">Books Returned : 232</p>
+      	   	 <p style="font-size: 40px; font-family: Acme;">Books not returned: 2 <button id="view" data-toggle="modal" data-target="#myModal1">View</button></p> 
+      	   	 
+      	   	<div class="modal fade" id="myModal1" role="dialog" style="color: orange;">
+           <div class="modal-dialog">
+    
+             <div class="modal-content">
+       
+               <div class="modal-body">
+                 <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                 <p style="font-size: 30px; font-family: Acme; margin-top: 40px;">Along came a spider - James Pattersons <button><a href="" id="returnButton" style="font-size: 20px; color:#763626; "> return</a></button></p> 
+                 <p style="font-size: 30px; font-family: Acme;">Sun shine down - Sidney Sheldon <button><a href="" id="returnButton" style="font-size: 20px; color:#763626;">return</a></button></p> 
+              </div>
+      </div>
+      	   </div>
+      		
+      	</div>
+      </div>
+    </div>
+  </div>
+</body>
+</

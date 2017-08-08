@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User login page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
+   <link  href="http://fonts.googleapis.com/css?family=Acme:regular" rel="stylesheet" type="text/css">
+
+
+
+   <style type="text/css">
+
+
+      .signIn{
+        /*margin-top: 200px;*/
+        margin-left: -15px;
+        font-size: 50px;
+        width: 50%;
+        border-radius: 50px;
+        box-shadow:  0px 3px 0px 0px #303030, inset -1px -3px 10px 1px #303030;
+        background-color: blue;
+      }
+
+      .signUp{
+       margin-left: 10px;
+        margin-top: 30px;
+        font-size: 50px;
+        width: 50%;
+        border-radius: 50px;
+        box-shadow:  0px 3px 0px 0px #303030, inset -1px -3px 10px 1px #303030;
+        background-color: blue;
+      }
+
+      input{
+        width: 90%;
+      }
+
+      button{
+        outline: none;
+      }
+
+    body{
+      background-image:url("http://www.flalib.org/assets/JoinUs/page_1638226.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: cover;
+      height: 200%;
+      width: 100%
+    }
+
+    .navbar{
+      background-color: #5C3317;
+    }
+
+    .well{
+      margin-top: 50%;
+      width: 500px;
+      border-radius: 30px;
+      height: 300px;
+    }
+
+    a{
+      color: white;
+    }
+
+    a:hover{
+      text-decoration: none;
+      background-color: white;
+      color: orange;
+    }
+
+    li{
+       padding-top: 10px;
+    }
+
+   </style>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>          
+      </button>
+      <a href="#" class="navbar-brand" style="font-size: 30px; font-family: Pacifico; padding-top: 20px;">Hello Books</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li style="font-family: Acme; font-size: 20px;"><a href="#">Home</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="library.html">Library</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="history.html">History</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="profile.html">Profile</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="admin.html">Admin</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginpage.html" style="font-family: Acme; font-size: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+   
+   <div class="container col-md-offset-4 col-md-4">
+   <div class="well col-md-6">
+       <div  class = "text-center" style="font-size: 80px; font-color: white; color: #763626;"><p style="color: orange;">HelloBooks</p></div>
+       <button type="button" class="signIn" data-toggle="modal" data-target="#myModal" style="background-color:#FF8C00; color: white; font-family: Pacifico;">Sign In</button>
+       <button type="button" class="signUp" data-toggle="modal" data-target="#myModal2" style="background-color:   #FF4500; color: white; font-family: Pacifico; ">Sign Up</button>
+   </div>
+
+       <div class="modal fade" id="myModal" role="dialog" style="color: orange;">
+           <div class="modal-dialog">
+    
+             <div class="modal-content">
+       
+               <div class="modal-body">
+                 <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                 <form style="font-size: 30px; margin-left: 20px">
+                     <p style="margin-top: 30px; font-family: Acme;">Username: <input type="text" name="username" required="required" style="font-size: 30px;"> <br></p>
+
+                     <p style="margin-top: 30px; font-family: Acme;"> Password: <input type="text" name="password" required="required" style="font-size: 30px;"></p>
+                 </form>
+              </div>
+              <div class="modal-footer">
+                 <a href="" style="float: left; font-family: Acme; font-size: 20px;">Forgot Password</a>
+                 <button type="button" class="login" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;"><a href="library.html">Login</a></button>
+               </div>
+          </div>
+           
+          </div>
+         </div>
+
+       <div class="modal fade" id="myModal2" role="dialog" style="color: orange;">
+          <div class="modal-dialog">
+    
+          <div class="modal-content">
+       
+               <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                     <form style="font-size: 30px; margin-left: 20px;">
+                       <p style="margin-top: 30px; font-family: Acme;">First Name: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Other Name: <br><input type="text" required="required" name="othername" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Email: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
+
+                       <p style="margin-top: 30px; font-family: Acme;"> Password: <br><input type="text" name="password" required="required" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Confirm Password: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="login" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;"><a href="library.html">Way to go!</a></button>
+              </div>
+      </div>
+           
+       </div>
+       </div>
+       
+   </div>
+
+</body>
+</html>
