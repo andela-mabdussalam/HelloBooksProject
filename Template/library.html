@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<title>User library</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
+   <link  href="http://fonts.googleapis.com/css?family=Acme:regular" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+	.navbar{
+		background-color: #763626;
+	}
+
+  a:hover{
+    cursor: pointer;
+    color: orange;
+    text-decoration: none;
+  }
+
+  input{
+    width: 100%;
+    font-family: Arial;
+    color: black;
+  }
+	
+	li{
+       padding-top: 10px;
+    }
+
+   </style>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>          
+      </button>
+      <a href="#" class="navbar-brand" style="font-size: 30px; font-family: Pacifico; padding-top: 20px;">Hello Books</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li style="font-family: Acme; font-size: 20px;"><a href="#">Home</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="library.html">Library</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="history.html">History</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="profile.html">Profile</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="admin.html">Admin</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginpage.html" style="font-family: Acme; font-size: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+         <div class="container" id="images">
+     		 <div class="row">
+     			 <img onmouseover="colorImg(this)" onmouseleave="normalImg(this)" src="https://i.kinja-img.com/gawker-media/image/upload/s--I4E1BkV5--/c_scale,fl_progressive,q_80,w_800/641522534013585731.jpg" class="img-thumbnail" style="border-radius: 50%; margin-left: 100px; width: 400px; height: 358px; margin-top: 150px; ">
+     			 <img onmouseover="colorImg(this)" onmouseleave="normalImg(this)" src="http://2.bp.blogspot.com/-nt49nAIGt3E/UnwMEyuFpkI/AAAAAAAADdE/UmdkK310rKk/s1600/digital-reader-books-e-waste.jpg" class="img-thumbnail" style="border-radius: 50%; margin-left: 100px; width:400px; height:358px; margin-top: 150px">
+     			 <a href="borrow.html"><p style="margin-left: 200px; font-size: 50px;">Fictional</p></a> <a href="borrow.html"><p style="float: right; font-size: 50px; margin-top: -90px; margin-right: 230px;">Motivational</p></a>
+     			 <img onmouseover="colorImg(this)" onmouseleave="normalImg(this)" src="http://netreset.in/wp-content/uploads/2016/11/atelier-education-ouverte.jpg" class="img-thumbnail" style="border-radius: 50%; margin-left: 100px; width:400px; height:358px; margin-top: 30px;">
+     			 <img onmouseover="colorImg(this)" onmouseleave="normalImg(this)" src="https://library.educause.edu/~/media/images/library/2016/3/compbook.jpg" style="border-radius: 50%; margin-left: 100px; width: 400px; height: 358px; margin-top: 30px;">
+     			 <a href="borrow.html"><p style="margin-left: 150px; font-size: 50px;">Technology</p></a> <a href="borrow.html"><p style="float: right; font-size: 50px; margin-top: -85px; margin-right: 230px;">Educational</p></a>
+     			 <img onmouseover="colorImg(this)" onmouseleave="normalImg(this)" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3181154.jpg" style="border-radius: 50%; margin-left: 350px; width: 400px; height: 358px; margin-top: 30px;"> 
+           <a href="borrow.html"><p style="margin-left: 480px; font-size: 50px;" data-toggle="modal" data-target="#myModal1">Others</p></a>
+     	     </div>
+          </div>
+          <div class="modal fade" id="myModal1" role="dialog" style="color: orange;">
+           <div class="modal-dialog">
+    
+             <div class="modal-content">
+       
+               <div class="modal-body">
+                 <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                 <form style="font-size: 30px; margin-left: 20px">
+                     <p style="margin-top: 30px; font-family: Pacifico;">Search Book: <input type="text" name="   username" placeholder="Along came a spider by James Pattersons" style="font-size: 20px;"> <br></p>
+              </div>
+              <div class="modal-footer">
+                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #763626; font-size: 20px; color: white; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;">Search</button>
+               </div>
+      </div>
+  </div>
+</body>
