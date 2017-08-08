@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+	<title>Admin page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
+   <link  href="http://fonts.googleapis.com/css?family=Acme:regular" rel="stylesheet" type="text/css">
+
+
+   <style type="text/css">
+
+        @media only screen and (max-width: 768px) {
+    .container-fluid {
+        width: 100%;
+    }
+}
+   .navbar{
+		background-color: #763626;
+	}
+
+	a:hover{
+		color: orange;
+		text-decoration: none;
+	}
+
+    img{  
+      width: 400px; 
+      height: 358px; 
+      margin-top: 100px;
+    }
+
+    .admin{
+      font-family: Acme;
+      font-size: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    a{
+      color: #763626; 
+    }
+
+    input{
+      width: 90%;
+    }
+
+    button:hover{
+      background-color: white;
+      color: #763626;
+    }
+
+    li{
+       padding-top: 10px;
+    }
+
+
+   </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>          
+      </button>
+      <a href="#" class="navbar-brand" style="font-size: 30px; font-family: Pacifico; padding-top: 20px;">Hello Books</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li style="font-family: Acme; font-size: 20px;"><a href="#">Home</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="library.html">Library</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="history.html">History</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="profile.html">Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginpage.html" style="font-family: Acme; font-size: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+         <div class="container-fluid col-md-offset-4 col-md-4">
+           <img src="https://d1yn1kh78jj1rr.cloudfront.net/thumbnail/plus-orange-circle_zyEoUL8__thumb.jpg" class="img-thumbnail" style="border-radius: 50%; margin-top: 150px;">
+           <a><p class="admin" data-toggle="modal" data-target="#myModal1" style="margin-left: -80px;">Add New Book</p></a>
+           <img src="http://www.clker.com/cliparts/6/z/Y/C/2/s/orange-plus-sign-hi.png" class="img-thumbnail" style="border-radius: 50%">
+           <a><p class="admin" data-toggle="modal" data-target="#myModal2" style="margin-left: -80px;">Add quantity</p></a>
+           <img src="https://dreamfeel.files.wordpress.com/2010/01/pastas.png" class="img-thumbnail" style="border-radius: 50%">
+           <a><p class="admin" data-toggle="modal" data-target="#myModal3" style="margin-left: -80px;">Categorise</p></a>
+           <img src="http://www.iconsdb.com/icons/download/icon-sets/web-2-blue/delete-256.png" class="img-thumbnail" style="border-radius: 50%">
+           <a><p class="admin" data-toggle="modal" data-target="#myModal4" style="margin-left: -80px;">Delete</p></a>
+        </div>
+
+        <div class="modal fade" id="myModal1" role="dialog" style="color: orange;">
+          <div class="modal-dialog">
+    
+          <div class="modal-content">
+       
+               <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                     <form style="font-size: 30px; margin-left: 20px;">
+                       <p style="margin-top: 30px; font-family: Acme;">Book Title: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Author: <br><input type="text" name="othername" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Genre: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #763626; font-size: 20px; color: white; box-shadow: 0px 15px 25px silver; font-family: Acme;">Add</button>
+              </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="modal fade" id="myModal2" role="dialog" style="color: orange;">
+          <div class="modal-dialog">
+    
+          <div class="modal-content">
+       
+               <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                     <form style="font-size: 30px; margin-left: 20px;">
+                       <p style="margin-top: 30px; font-family: Acme;">Book Title: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                  
+                       <p style="margin-top: 30px; font-family: Acme;">Quantity: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #763626; font-size: 20px; color: white; box-shadow: 0px 15px 25px silver; font-family: Acme;">Add</button>
+              </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="modal fade" id="myModal3" role="dialog" style="color: orange;">
+          <div class="modal-dialog">
+    
+          <div class="modal-content">
+       
+               <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                     <form style="font-size: 30px; margin-left: 20px;">
+                       <p style="margin-top: 30px; font-family: Acme;">Book Title: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                  
+                       <p style="margin-top: 30px; font-family: Acme;">Genre: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #763626; font-size: 20px; color: white; box-shadow: 0px 15px 25px silver; font-family: Acme;">Add</button>
+              </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="modal fade" id="myModal4" role="dialog" style="color: orange;">
+          <div class="modal-dialog">
+    
+          <div class="modal-content">
+       
+               <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
+                     <form style="font-size: 30px; margin-left: 20px;">
+                       <p style="margin-top: 30px; font-family: Acme;">Book Title: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                  
+                    </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #763626; font-size: 20px; color: white; box-shadow: 0px 15px 25px silver; font-family: Acme;">Delete</button>
+              </div>
+      </div>
+      </div>
+      </div>
+
+</body> 
+ </div>
