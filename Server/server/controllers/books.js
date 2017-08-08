@@ -4,13 +4,13 @@ const { Books } = db;
 const { RentedBooks } = db;
 
 const booksController = {
-  // User can add books
   create(req, res) {
     return Books
       .create({
         title: req.body.title,
         author: req.body.author,
         category: req.body.category,
+
       })
       .then(books => res.status(201).send(books))
       .catch(error => res.status(400).send(error));

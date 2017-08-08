@@ -22,7 +22,11 @@ describe('Users', () => {
       password: 'moyo',
     };
     chai.request(app)
+<<<<<<< HEAD
       .post('/api/v1/users/signup')
+=======
+      .post('/api/users/signup')
+>>>>>>> 13009b894b001169534109e2919ae2a349e10555
       .send(Users)
       .end((err, res) => {
         res.should.have.status(201);
@@ -38,6 +42,7 @@ describe('Users', () => {
       });
   });
   it('should let users sign in /signin POST', (done) => {
+<<<<<<< HEAD
     chai.request(app)
       .post('/api/v1/users/signin')
       .send(Users)
@@ -45,12 +50,29 @@ describe('Users', () => {
         console.log(res);
         res.should.have.status(200);
         res.should.be.json;
+=======
+    Users = {
+      userName: 'Moyo',
+      password: 'moyo',
+    };
+    chai.request(app)
+      .post('/api/users/signin')
+      .send(Users)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.html;
+        res.body.should.equal('Welcome Moyo');
+>>>>>>> 13009b894b001169534109e2919ae2a349e10555
         res.body.should.not.be.empty;
         res.body.should.have.property('userName');
         res.body.should.have.property('email');
         res.body.should.have.property('password');
         res.body.userName.should.equal('Moyo');
+<<<<<<< HEAD
         res.body.password.should.equal('moyo');
+=======
+        // res.body.password.should.equal('moyo');
+>>>>>>> 13009b894b001169534109e2919ae2a349e10555
         done();
       });
   });
@@ -58,6 +80,7 @@ describe('Users', () => {
 
 
 describe('Books', () => {
+<<<<<<< HEAD
   before(() => {
     Books.sync();
   });
@@ -131,5 +154,16 @@ describe('Books', () => {
           });
       });
     });
+=======
+  it('should list ALL books on /books GET', (done) => {
+    chai.request(app)
+      .get('/api/users/books')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('array');
+        done();
+      });
+>>>>>>> 13009b894b001169534109e2919ae2a349e10555
   });
 });
