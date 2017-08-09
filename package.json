@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node ./Server/bin/www",
+    "start": "node ./Server/bin/www",
     "test": "mocha --compilers js:babel-core/register"
   },
   "keywords": [],
