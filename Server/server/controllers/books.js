@@ -1,11 +1,8 @@
 import db from '../models';
 
-const { Books } = db;
-const { RentedBooks } = db;
-
 const booksController = {
   create(req, res) {
-    return Books
+    return db.Books
       .create({
         title: req.body.title,
         author: req.body.author,
@@ -16,7 +13,7 @@ const booksController = {
       .catch(error => res.status(400).send(error));
   },
   list(req, res) {
-    return Books
+    return db.Books
       .findAll({})
       .then((books) => {
         if (books.length === 0) {
@@ -30,7 +27,7 @@ const booksController = {
       });
   },
   update(req, res) {
-    return Books
+    return db.Books
       .findById(req.params.booksId)
       .then((books) => {
         if (!books) {
@@ -43,7 +40,7 @@ const booksController = {
           author: req.body.author,
           category: req.body.category,
         })
-          .then(() => res.status(200).send(books)) // Send back the updated books.
+          .then(() => res.status(200).send('Books Updated!')) // Send back the updated books.
           .catch(error => res.status(400).send(error));
       })
       .catch((error) => {
@@ -54,20 +51,27 @@ const booksController = {
   borrow(req, res) {
     const cur = new Date();
     const after24Days = cur.setDate(cur.getDate() + 24);
-    return RentedBooks
-      .create({
-        title: req.body.title,
-        usersId: req.params.usersId,
-        booksId: req.body.booksId,
-        toReturnDate: after24Days,
+    return db.Books.findById(req.params.booksId).then((books) => {
+      if (books) {
+        return books;
+      }
+    })
+      .then(() => {
+        db.RentedBooks.create({
+          title: req.body.title,
+          usersId: req.params.usersId,
+          booksId: req.body.booksId,
+          toReturnDate: after24Days,
+        })
+          .then(RentedBooks => res.status(200).send(RentedBooks))
+          .catch(error => res.status(404).send(error));
       })
-      .then(books => res.status(200).send('Successfully Borrowed '.concat(req.body.title)))
       .catch((error) => {
         res.status(404).send(error);
       });
   },
   listNotReturnedBooks(req, res) {
-    return RentedBooks
+    return db.RentedBooks
       .findOne({
         where: {
           returned: false,
@@ -86,7 +90,7 @@ const booksController = {
       });
   },
   returnBooks(req, res) {
-    return RentedBooks
+    return db.RentedBooks
       .update({
         returned: true,
         returnDate: Date.now(),
@@ -97,7 +101,7 @@ const booksController = {
           booksId: req.params.booksId
         }
       })
-      .then(books => res.status(200).send('Successfully Returned'))
+      .then(()=> res.status(200).send('Successfully Returned'))
       .catch((error) => {
         console.log(error);
         res.status(404).send(error);
