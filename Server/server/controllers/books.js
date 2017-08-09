@@ -40,7 +40,7 @@ const booksController = {
           author: req.body.author,
           category: req.body.category,
         })
-          .then(() => res.status(200).send('Books Updated!')) // Send back the updated books.
+          .then(() => res.status(200).send({ message: 'Books Updated!' })) // Send back the updated books.
           .catch(error => res.status(400).send(error));
       })
       .catch((error) => {
@@ -101,7 +101,7 @@ const booksController = {
           booksId: req.params.booksId
         }
       })
-      .then(()=> res.status(200).send('Successfully Returned'))
+      .then(() => res.status(200).send({ message: 'Successfully Returned' }))
       .catch((error) => {
         console.log(error);
         res.status(404).send(error);
