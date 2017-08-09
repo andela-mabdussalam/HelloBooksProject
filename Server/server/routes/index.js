@@ -5,7 +5,7 @@ import booksController from '../controllers/books';
 
 export default (app) => {
   app.get('/api', (req, res) => res.status(200).send({
-    message: 'Welcome to the Todos API!',
+    message: 'Welcome to the HelloBooks API!',
   }));
 
   app.post('/api/v1/users/signup', usersController.create);
