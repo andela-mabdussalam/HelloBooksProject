@@ -9,6 +9,7 @@ import app from '../../app';
 const Users = models.Users;
 const usersController = {
   create(req, res) {
+    // create user
     return Users
       .create({
         userName: req.body.userName,
@@ -22,7 +23,7 @@ const usersController = {
     return Users
       .findOne({
         where: {
-          userName: req.body.userName,
+          userName: req.body.userName, // find user by username
         }
       })
       .then((user) => {
@@ -32,9 +33,9 @@ const usersController = {
           });
         }
         else if (bcrypt.compareSync(req.body.password, user.password)) {
-          // Token
+          // create Token
           const token = jwt.sign({ user }, app.get('secret'), {
-            expiresIn: 60 * 60 * 24
+            expiresIn: 60 * 60 * 24 // token expires after 24 hours
           });
           return res.status(200).send({
             message: 'Successfully logged in',
