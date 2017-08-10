@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "corajiaku96",
-    "database": "HelloBooks-dev",
+    "username": "mariamabdussalam",
+    "password": "",
+    "database": "testing",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
